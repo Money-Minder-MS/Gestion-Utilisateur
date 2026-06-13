@@ -24,6 +24,9 @@ public class Utilisateur {
 
     private String motDePasse;
 
+    @Column(name = "keycloak_sub", unique = true)
+    private String keycloakSub;
+
     @Column(name = "role_id")
     private Long roleId;
 
@@ -49,6 +52,7 @@ public class Utilisateur {
     public String getTelephone() { return telephone; }
     public String getEmail() { return email; }
     public String getMotDePasse() { return motDePasse; }
+    public String getKeycloakSub() { return keycloakSub; }
     public Long getRoleId() { return roleId; }
 
     public void setId(Long id) { this.id = id; }
@@ -58,5 +62,6 @@ public class Utilisateur {
     public void setTelephone(String telephone) { this.telephone = telephone; }
     public void setEmail(String email) { this.email = email; }
     public void setMotDePasse(String motDePasse) { this.motDePasse = motDePasse; }
+    public void setKeycloakSub(String keycloakSub) { this.keycloakSub = keycloakSub; }
     public void setRoleId(Long roleId) { this.roleId = roleId; }
 }
